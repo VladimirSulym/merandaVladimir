@@ -6,6 +6,7 @@ function renderSecondaryPost (item, index, type=2) {
             .append($('<h2>'))
             .append($('<p>').addClass('mb-3'))
             .append(renderAuthor(item));
+        return contents;
     } else {
         //;
     }

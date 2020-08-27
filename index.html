@@ -27,7 +27,7 @@
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="css/style.css">
-
+  <script src="js/my.js"></script>
 
 
 </head>
@@ -131,18 +131,19 @@
           <div class="container">
             <div class="half-post-entry d-block d-lg-flex bg-light">
               <div class="img-bg" style="background-image: url('images/big_img_1.jpg')"></div>
-              <div class="contents">
+              <div id="news2" class="contents">
                 <span class="caption">Editor's Pick</span>
-                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
-                
+                <!-- <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis.
+                  Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+
                 <div class="post-meta">
                   <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
                   <span class="date-read">Jun 14
                     <span class="mx-1">&bullet;</span> 3 min read
                     <span class="icon-star2"></span>
                   </span>
-                </div>
+                </div>-->
 
               </div>
             </div>
@@ -567,12 +568,15 @@
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
 
-
-
-
+  <script src="js/my.js"></script>
+  <script src="js/data_stub.js"></script>
   <script src="js/main.js"></script>
-<script>
+
+  <script>
   $(document).ready(()=>{
+    const news2 = $('#news2');
+    news2.append(renderSecondaryPost(GS.posts[0]));
+    return news2;
     //загрузка данных из localstoreg и рендер на страницу
   });
 </script>
